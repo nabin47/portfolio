@@ -1,0 +1,42 @@
+title: "Your Name | PhD Applicant"
+description: "Portfolio website for PhD applications in the USA: projects, publications, blogs, and work experience."
+url: "https://yourusername.github.io"
+baseurl: ""
+
+markdown: kramdown
+permalink: /blog/:title/
+
+timezone: UTC
+lang: en
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+  publications:
+    output: false
+  experience:
+    output: false
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+author:
+  name: "Your Name"
+  email: "your.email@example.com"
+  scholar: "https://scholar.google.com"
+  github: "https://github.com/yourusername"
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: project
